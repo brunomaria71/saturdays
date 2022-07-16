@@ -15,48 +15,52 @@
 
 // let num = 15;
 
-// function fizzBuzz(num) {
-//   let result = [];
+function fizzBuzz(num) {
+  let result = [];
 
-//   for (let i = 1; i <= num; i++) {
-//     if (i % 3 == 0 && i % 5 == 0) {
-//       result.push("FizzBuzz");
-//     } else if (i % 3 == 0) {
-//       result.push("Fizz");
-//     } else if (i % 5 == 0) {
-//       result.push("Buzz");
-//     } else {
-//       result.push(i);
-//     }
-//   }
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      result.push("FizzBuzz");
+    } else if (i % 3 == 0) {
+      result.push("Fizz");
+    } else if (i % 5 == 0) {
+      result.push("Buzz");
+    } else {
+      result.push(i);
+    }
+  }
 
-//   return result;
-// }
+  return result;
+}
 
-// console.log(fizzBuzz(num));
+let fizzResults = fizzBuzz(15);
+// let list = fizzResults.join("\n"); // this is the same as line 38-40
+for (let i = 0; i < fizzResults.length; i++) {
+  console.log(fizzResults[i]);
+}
 
 //Answer one:
 
-let a = 15;
+// let a = 15;
 
-function fizzBuzz(a) {
-  let string = "",
-    arr = [];
-  for (let i = 1; i <= a; i++) {
-    if (i % 3 == 0) {
-      string = string + "Fizz";
-    }
-    if (i % 5 == 0) {
-      string = string + "Buzz";
-    } else if (i % 3 != 0) {
-      string = string + i;
-    }
-    string = string + " ";
-  }
-  arr.push(string.trim());
-  return arr;
-}
+// function fizzBuzz(a) {
+//   let string = "",
+//     arr = [];
+//   for (let i = 1; i <= a; i++) {
+//     if (i % 3 == 0) {
+//       string = string + "Fizz";
+//     }
+//     if (i % 5 == 0) {
+//       string = string + "Buzz";
+//     } else if (i % 3 != 0) {
+//       string = string + i;
+//     }
+//     string = string + " ";
+//   }
+//   arr.push(string.trim());
+// }
+// return arr;
 
-console.log(fizzBuzz(a));
+// console.log(fizzBuzz(a));
 
 // or you can do let i % 15 === 0 it will push fizzbuzz
