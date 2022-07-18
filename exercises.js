@@ -6,67 +6,60 @@
 // The classic ‘for’ lets you start at the beginning or end
 // ‘For of’ is used when traversal order does not matter.
 
-// Ex 1 on solution: 
+// Ex 1 on solution:
 
-const input = [1,2,3,4,5];
+const firstInput = [1, 2, 3, 4, 5];
 
 const classicForLoopSum = (arr) => {
-	 let sum = 0 
-	For (let i = 0; i < arr.length; i++) {
-	sum = sum + arr[i]
-	}
-	return sum;
-}
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum;
+};
 
-console.log(“the classic sum is”, classicForLoopSum(input))
+console.log("the classic sum is", classicForLoopSum(firstInput));
 
 // Ex2 on solution in the for of:
 
+const secondInput = [1, 2, 3, 4, 5];
 
-const input = [1,2,3,4,5];
-
-function forOfSum (arr){
-	let sum = 0 
-	For (const num of arr){
-	sum = sum + num 
-	}
-	return sum;
+function forOfSum(arr) {
+  let sum = 0;
+  for (const num of arr) {
+    sum = sum + num;
+  }
+  return sum;
 }
 
-console.log(“the for of sum is”, forOfSum(input))
+console.log("the for of sum is", forOfSum(secondInput));
 
-// Ex 3 on for in: 
+// Ex 3 on for in:
 
-Const input = [1,2,3,4,5];
+const thirdInput = [1, 2, 3, 4, 5];
 
-Const forInSum = (arr) => {
-	let sum = 0 
+const forInSum = (arr) => {
+  let sum = 0;
 
-	For (const num of arr) {
+  for (const num of arr) {
+    sum = sum + num;
+  }
 
-	sum = sum + num 
+  return sum;
+};
 
-	}
+console.log("the array for in sum is", forInSum(thirdInput));
 
-	Return sum;
-}
+const forInSum2 = (obj) => {
+  let sum = 0;
 
-console.log(“the for in sum is”, forInSum(input));
+  for (const property in obj) {
+    sum = sum + obj[property];
+  }
 
-Const forInSum = (obj) => {
+  return sum;
+};
 
-	let sum = 0 
+const object = { a: 1, b: 2, c: 3, d: 4, e: 5 };
 
-	For (const property in obj) {
-
-	sum = sum + obj[property] 
-
-	}
-
-	Return sum;
-}
-
-Const object = { a:1, b: 2, c:3, d:4, e:5 }
-
-console.log(“the for in sum is”, forInSum(input))
-
+console.log("the object for in sum is", forInSum2(object));
