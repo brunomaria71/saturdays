@@ -34,7 +34,7 @@ function fizzBuzz(num) {
 }
 
 let fizzResults = fizzBuzz(15);
-// let list = fizzResults.join("\n"); // this is the same as line 38-40
+// let list = fizzResults.join("\n"); // this is the same as line 38-40 // this is to have each item come out in its own line instead of being listed in an array.
 for (let i = 0; i < fizzResults.length; i++) {
   console.log(fizzResults[i]);
 }
