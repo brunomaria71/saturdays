@@ -17,4 +17,4 @@ function timeForMilkAndCookies(date) {
   return date.getMonth() === 11 && date.getDate() == 24;
 }
 
-console.log(timeForMilkAndCookies(new Date(3001, 02, 24)));
+console.log(timeForMilkAndCookies(new Date(3001, 2, 24)));
